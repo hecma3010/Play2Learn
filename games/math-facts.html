@@ -23,7 +23,7 @@
                             <a href="anagram-hunt.html">Anagram Hunt</a>
                         </li>
                         <li>
-                            <a href="math-facts.html"  aria-current="page">Math Facts Practice</a>
+                            <a href="math-facts.html" aria-current="page">Math Facts Practice</a>
                         </li>
                     </ul>
                 </li>
@@ -38,6 +38,51 @@
     </header>
     <main>
         <h1>Math Facts Practice</h1>
+        <section id="start-screen">
+            <h2 class="visually-hidden">Start screen</h2>
+            <label for="operation">Operation:</label>
+            <select id="operation" name="operation">
+                <option value="addition" selected>Addition</option>
+                <option value="subtraction">Subtraction</option>
+                <option value="multiplication">Multiplication</option>
+                <option value="division">Division</option>
+            </select>
+            <button type="button"  id="start-button">Go</button>
+            <ol>
+                <li>Select operation.</li>
+                <li>Press <strong>Go</strong>.</li>
+                <li>How many problems can you solve in 30 seconds?</li>
+            </ol>
+        </section>
+        <section id="game-screen" hidden>
+            <h2 class="visually-hidden">Keypad</h2>
+            <p id="game-operation">Addition</p>
+            <p id="problem">5 + 3</p>
+            <label for="answer" class="visually-hidden">Your answer</label>
+            <input type="text" id="answer" name="answer" inputmode="numeric" autocomplete="off">
+            <div id="keypad">
+                <button type="button" class="keypad-button">1</button>
+                <button type="button" class="keypad-button">2</button>
+                <button type="button" class="keypad-button">3</button>
+                <button type="button" class="keypad-button">4</button>
+                <button type="button" class="keypad-button">5</button>
+                <button type="button" class="keypad-button">6</button>
+                <button type="button" class="keypad-button">7</button>
+                <button type="button" class="keypad-button">8</button>
+                <button type="button" class="keypad-button">9</button>
+                <button type="button" class="keypad-button">0</button>
+                <button id="clear-button" type="button">Clear</button>
+            </div>
+            <p>Score: <span id="score">0</span> </p>
+            <p>Time Left: <span id="time-left">30 </span>seconds</p>
+        </section>
+        <section id="end-screen" hidden>
+            <p id="end-operation">Addition</p>
+            <p>Time's up!</p>
+            <h2>Your final score is:</h2>
+            <p id="final-score">0</p>
+            <button type="button" id="play-again-button">Play Again</button>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 Play2Learn</p>
@@ -58,7 +103,7 @@
             </ul>
         </nav>
     </footer>
-    
+    <script src="../js/math-facts.js"></script>
 </body>
 
 </html>
