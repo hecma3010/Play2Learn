@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav aria-label="Main" class="navbar navbar-expand-lg">
+        <nav aria-label="Main" class="navbar navbar-expand-lg border-bottom">
             <div class="container-fluid">
                 <a href="../index.html" class="navbar-brand">Play2Learn</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main-menu"
@@ -32,7 +32,8 @@
                                         Hunt</a>
                                 </li>
                                 <li>
-                                    <a href="math-facts.html" aria-current="page" class="dropdown-item active">Math Facts
+                                    <a href="math-facts.html" aria-current="page" class="dropdown-item active">Math
+                                        Facts
                                         Practice</a>
                                 </li>
                             </ul>
@@ -48,73 +49,77 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Math Facts Practice</h1>
-        <section id="start-screen">
+    <main class="container my-4">
+        <h1 class="text-center">Math Facts Practice</h1>
+        <section class="text-center" id="start-screen">
             <h2 class="visually-hidden">Start screen</h2>
-            <label for="operation">Operation:</label>
-            <select id="operation" name="operation">
-                <option value="addition" selected>Addition</option>
-                <option value="subtraction">Subtraction</option>
-                <option value="multiplication">Multiplication</option>
-                <option value="division">Division</option>
-            </select>
-            <button type="button" id="start-button">Go</button>
-            <ol>
+            <div class="mb-3">
+                <label for="operation">Operation:</label>
+                <select class="form-select w-auto d-inline-block" id="operation" name="operation">
+                    <option value="addition" selected>Addition</option>
+                    <option value="subtraction">Subtraction</option>
+                    <option value="multiplication">Multiplication</option>
+                    <option value="division">Division</option>
+                </select>
+                <button class="btn btn-success" type="button" id="start-button">Go</button>
+            </div>
+            <ol class="text-start d-inline-block mt-4">
                 <li>Select operation.</li>
                 <li>Press <strong>Go</strong>.</li>
                 <li>How many problems can you solve in 30 seconds?</li>
             </ol>
         </section>
-        <section id="game-screen" hidden>
+        <section class="text-center" id="game-screen" hidden>
             <h2 class="visually-hidden">Game screen</h2>
-            <p id="game-operation">Addition</p>
-            <p id="problem">5 + 3</p>
-            <label for="answer" class="visually-hidden">Your answer</label>
-            <input type="text" id="answer" name="answer" inputmode="numeric" autocomplete="off">
-            <div id="keypad">
-                <button type="button" class="keypad-button">1</button>
-                <button type="button" class="keypad-button">2</button>
-                <button type="button" class="keypad-button">3</button>
-                <button type="button" class="keypad-button">4</button>
-                <button type="button" class="keypad-button">5</button>
-                <button type="button" class="keypad-button">6</button>
-                <button type="button" class="keypad-button">7</button>
-                <button type="button" class="keypad-button">8</button>
-                <button type="button" class="keypad-button">9</button>
-                <button type="button" class="keypad-button">0</button>
-                <button id="clear-button" type="button">Clear</button>
+            <p class="fs-4" id="game-operation">Addition</p>
+            <p class="display-6 fw-bold" id="problem">5 + 3</p>
+            <label for="answer" class="visually-hidden">Your
+                answer</label>
+            <input class="form-control w-auto mx-auto text-center mb-3" type="text" id="answer" name="answer"
+                inputmode="numeric" autocomplete="off">
+            <div class="mb-3" id="keypad">
+                <button class="btn btn-success btn-lg keypad-button" type="button">1</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">2</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">3</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">4</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">5</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">6</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">7</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">8</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">9</button>
+                <button class="btn btn-success btn-lg keypad-button" type="button">0</button>
+                <button class="btn btn-success btn-lg" id="clear-button" type="button">Clear</button>
             </div>
             <p>Score: <span id="score">0</span> </p>
             <p>Time Left: <span id="time-left">30</span> seconds</p>
         </section>
-        <section id="end-screen" hidden>
+        <section class="text-center" id="end-screen" hidden>
             <p id="end-operation">Addition</p>
-            <p>Time's up!</p>
-            <h2>Your final score is:</h2>
-            <p id="final-score">0</p>
-            <button type="button" id="play-again-button">Play Again</button>
+            <p class="text-danger fw-bold">Time's up!</p>
+            <h2 class="display-6">Your final score is:</h2>
+            <p class="display-1 fw-bold" id="final-score">0</p>
+            <button class="btn btn-success" type="button" id="play-again-button">Play Again</button>
         </section>
     </main>
-    <footer class="d-flex justify-content-between align-items-center">
-        <p>&copy; 2026 Play2Learn</p>
+    <footer class="container d-flex justify-content-between align-items-center border-top mt-5 py-3">
+        <p class="mb-0 small">&copy; 2026 Play2Learn</p>
         <nav aria-label="Social">
-            <ul class="list-unstyled d-flex gap-3">
+            <ul class="list-unstyled d-flex gap-3 mb-0">
                 <li>
-                    <a href="../contact-us.html" aria-label="Contact Us"><i class="bi-envelope"
+                    <a href="../contact-us.html" aria-label="Contact Us"><i class="bi-envelope fs-4"
                             aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
-                            class="bi-instagram" aria-hidden="true"></i></a>
+                            class="bi-instagram fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i
-                            class="bi-twitter" aria-hidden="true"></i></a>
+                            class="bi-twitter fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
-                            class="bi-facebook" aria-hidden="true"></i></a>
+                            class="bi-facebook fs-4" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </nav>

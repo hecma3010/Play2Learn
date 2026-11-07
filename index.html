@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav aria-label="Main" class="navbar navbar-expand-lg">
+        <nav aria-label="Main" class="navbar navbar-expand-lg border-bottom">
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand">Play2Learn</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main-menu"
@@ -47,58 +47,61 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container my-4">
         <h1 class="visually-hidden">Play2Learn</h1>
-        <section>
+        <section class="col-lg-8 mx-auto">
             <h2>Happy Clients Say...</h2>
             <figure id="quote">
-                <blockquote>
+                <blockquote class="fst-italic text-success">
                     <p id="quote-text">Play2Learn completely transformed how our kids engage with foundational concepts.
                         The perfect blend of interactive gamification and core curriculum metrics has boosted our
                         students' math fact fluency by 40% this semester alone. Learning isn't a chore anymore; it's an
                         adventure they look forward to every single day.</p>
                 </blockquote>
-                <figcaption id="quote-author">Justin Jest</figcaption>
+                <figcaption class="text-end" id="quote-author">Justin Jest</figcaption>
             </figure>
         </section>
-        <section>
+        <section class="row g-4">
             <h2 class="visually-hidden">Our Games</h2>
-            <article>
+            <article class="col-md-6 d-flex flex-column">
                 <h3>Anagram Hunt</h3>
                 <p>Anagram Hunt is a puzzle-solving game focused on finding anagrams. The game is based on the premise
                     of discovering valid hidden words that can be formed using the exact letters of a given prompt word,
                     such as "ARREST". Players have the option to choose their difficulty based on word length (5, 6, 7,
                     8, or 9+ letters) and must find as many anagrams as possible within a 30-second time limit.</p>
-                <a href="games/anagram-hunt.html" aria-label="Play Anagram Hunt">Play</a>
+                <a href="games/anagram-hunt.html" class="btn btn-success btn-sm mt-auto align-self-end"
+                    aria-label="Play Anagram Hunt">Play</a>
             </article>
-            <article>
+            <article class="col-md-6 d-flex flex-column">
                 <h3>Math Facts Practice</h3>
                 <p>Math Facts Practice is a mathematical game focused on solving basic arithmetic problems (e.g., 5 + 6
                     = 11). The player
                     must solve problems (addition, subtraction, multiplication, and division) within a 30-second time
                     limit. Each correct answer will add one point to their final score.</p>
-                <a href="games/math-facts.html" aria-label="Play Math Facts Practice">Play</a>
+                <a href="games/math-facts.html" class="btn btn-success btn-sm mt-auto align-self-end"
+                    aria-label="Play Math Facts Practice">Play</a>
             </article>
         </section>
     </main>
-    <footer class="d-flex justify-content-between align-items-center">
-        <p>&copy; 2026 Play2Learn</p>
+    <footer class="container d-flex justify-content-between align-items-center border-top mt-5 py-3">
+        <p class="mb-0 small">&copy; 2026 Play2Learn</p>
         <nav aria-label="Social">
-            <ul class="list-unstyled d-flex gap-3">
+            <ul class="list-unstyled d-flex gap-3 mb-0">
                 <li>
-                    <a href="contact-us.html" aria-label="Contact Us"><i class="bi-envelope" aria-hidden="true"></i></a>
+                    <a href="contact-us.html" aria-label="Contact Us"><i class="bi-envelope fs-4"
+                            aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
-                            class="bi-instagram" aria-hidden="true"></i></a>
+                            class="bi-instagram fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i
-                            class="bi-twitter" aria-hidden="true"></i></a>
+                            class="bi-twitter fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
-                            class="bi-facebook" aria-hidden="true"></i></a>
+                            class="bi-facebook fs-4" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </nav>

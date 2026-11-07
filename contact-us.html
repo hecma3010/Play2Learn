@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav aria-label="Main" class="navbar navbar-expand-lg">
+        <nav aria-label="Main" class="navbar navbar-expand-lg border-bottom">
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand">Play2Learn</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main-menu"
@@ -47,38 +47,54 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Contact Us</h1>
-        <form action="javascript:alert('Form Submitted')">
-            <label for="contact-email">Your email:</label>
-            <input type="email" id="contact-email" name="email" required>
-            <label for="contact-subject">Subject:</label>
-            <input type="text" id="contact-subject" name="subject" required>
-            <label for="contact-message">Message:</label>
-            <textarea id="contact-message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <main class="container my-4">
+        <div class="col-lg-8 mx-auto">
+            <h1>Contact Us</h1>
+            <form action="javascript:alert('Form Submitted')">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" for="contact-email">Your email:</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="email" id="contact-email" name="email" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" for="contact-subject">Subject:</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" id="contact-subject" name="subject" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label" for="contact-message">Message:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-success" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
     </main>
 
-    <footer class="d-flex justify-content-between align-items-center">
-        <p>&copy; 2026 Play2Learn</p>
+    <footer class="container d-flex justify-content-between align-items-center border-top mt-5 py-3">
+        <p class="mb-0 small">&copy; 2026 Play2Learn</p>
         <nav aria-label="Social">
-            <ul class="list-unstyled d-flex gap-3">
+            <ul class="list-unstyled d-flex gap-3 mb-0">
                 <li>
-                    <a href="contact-us.html" aria-label="Contact Us" aria-current="page"><i class="bi-envelope"
+                    <a href="contact-us.html" aria-current="page" aria-label="Contact Us"><i class="bi-envelope fs-4"
                             aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
-                            class="bi-instagram" aria-hidden="true"></i></a>
+                            class="bi-instagram fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i
-                            class="bi-twitter" aria-hidden="true"></i></a>
+                            class="bi-twitter fs-4" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
-                            class="bi-facebook" aria-hidden="true"></i></a>
+                            class="bi-facebook fs-4" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </nav>
