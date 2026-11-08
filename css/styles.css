@@ -1,0 +1,18 @@
+@media (min-width: 992px) { /*navbar separators (desktop only)*/
+    .nav-item {
+        margin: 8px 0;
+    }
+    .nav-item + .nav-item {
+        border-left: 1px solid gray;
+    }
+}
+#keypad { /*Math Facts keypad*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 15rem;
+    margin: 0 auto;
+}
+#clear-button { /*keypad clear button*/
+    grid-column: span 2;
+}
