@@ -2,7 +2,8 @@
 
 /* Game data */
 
-
+const GAME_DURATION = 30;
+const ONE_SECOND = 1000;
 const MIN_NUMBER = 0;
 const MAX_NUMBER = 10;
 const operationSymbols = {
@@ -33,12 +34,16 @@ const problemDisplay = document.getElementById('problem');
 const scoreDisplay = document.getElementById('score');
 const clearButton = document.getElementById('clear-button');
 const keypadButtons = document.querySelectorAll('.keypad-button');
+const timeLeftDisplay = document.getElementById('time-left');
+const finalScoreDisplay = document.getElementById('final-score');
 
 /* State */
 
 let currentOperation = '';
 let currentAnswer = 0;
 let score = 0;
+let timeLeft = 0;
+let timerId = null;
 
 /* Screen navigation */
 
@@ -49,15 +54,19 @@ const showScreen = (screen) => {
     screen.hidden = false;
 };
 const startGame = () => {
+    clearInterval(timerId);
     currentOperation = operationSelect.value;
     score = 0;
     scoreDisplay.textContent = score;
+    timeLeft = GAME_DURATION;
     gameOperation.textContent = operationNames[currentOperation];
     endOperation.textContent = operationNames[currentOperation];
+    timeLeftDisplay.textContent = timeLeft;
     answerInput.value = '';
     generateProblem();
     showScreen(gameScreen);
     answerInput.focus();
+    timerId = setInterval(tick, ONE_SECOND);
 };
 const playAgain = () => {
     showScreen(startScreen);
@@ -123,6 +132,22 @@ const pressDigit = (event) => {
 const clearAnswer = () => {
     answerInput.value = '';
     answerInput.focus();
+};
+
+/* Timer */
+
+const tick = () => {
+    timeLeft = timeLeft - 1;
+    timeLeftDisplay.textContent = timeLeft;
+    if (timeLeft === 0) {
+        endGame();
+    }
+};
+const endGame = () => {
+    clearInterval(timerId);
+    finalScoreDisplay.textContent = score;
+    showScreen(endScreen);
+    playAgainButton.focus();
 };
 
 /* Event listeners */
