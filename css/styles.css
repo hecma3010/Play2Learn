@@ -1,4 +1,4 @@
-/*navbar separators (desktop only)*/
+/*navbar separators (desktop only) */
 @media (min-width: 992px) {
     .nav-item {
         margin: 8px 0;
@@ -9,7 +9,7 @@
     }
 }
 
-/*Math Facts keypad*/
+/*Math Facts keypad */
 #keypad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
