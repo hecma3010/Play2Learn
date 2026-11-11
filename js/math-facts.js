@@ -50,14 +50,14 @@ const showScreen = (screen) => {
 };
 const startGame = () => {
     currentOperation = operationSelect.value;
+    score = 0;
+    scoreDisplay.textContent = score;
     gameOperation.textContent = operationNames[currentOperation];
     endOperation.textContent = operationNames[currentOperation];
     answerInput.value = '';
+    generateProblem();
     showScreen(gameScreen);
     answerInput.focus();
-    score = 0;
-    scoreDisplay.textContent = score;
-    generateProblem();
 };
 const playAgain = () => {
     showScreen(startScreen);
